@@ -1,0 +1,39 @@
+# TinyLlama 微调配置文件
+
+# 模型路径
+model_name: /home/otojf7/data/efficient-llm-unlearning-main/llm_weights/tinyLlama
+tokenizer_name: /home/otojf7/data/efficient-llm-unlearning-main/llm_weights/tinyLlama
+
+# 数据集路径和格式
+data_path: /home/otojf7/data/efficient-llm-unlearning-main/TOFU/data/full.json
+data_format: json  # 新增字段，告诉 datasets 是 JSON 文件
+split: full
+
+# 模型类型
+model_family: tinyllama
+
+# 训练参数
+max_seq_len: 512
+batch_size: 1
+gradient_accumulation_steps: 1
+gradient_checkpointing: false
+lr: 5e-5
+num_epochs: 1
+weight_decay: 0.01
+warmup_ratio: 0.05
+
+# LoRA 配置
+LoRA:
+  use: false
+  r: 4
+  alpha: 16
+  dropout: 0.05
+
+# 节省显存
+fp16: true
+
+# 保存路径
+save_dir: /home/otojf7/data/efficient-llm-unlearning-main/llm_weights/my_tinyllama_finetune/
+
+# 随机种子
+seed: 42
