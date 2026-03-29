@@ -1,0 +1,10 @@
+tinyllama:
+  hf_key: "/home/otojf7/data/efficient-llm-unlearning-main/llm_weights/tinyLlama"   # ← 必须是这个绝对路径
+  question_start_tag: "Question: "
+  question_end_tag: "\n"
+  answer_tag: "Answer: "
+  #flash_attention2: "false" 现有transforms版本已删除该用法
+  attn_implementation: "flash_attention_2"
+  gradient_checkpointing: "false"
+  ft_model_path: null
+  
