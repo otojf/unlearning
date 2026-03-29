@@ -1,0 +1,17 @@
+transformers>=4.38.0
+datasets
+accelerate
+deepspeed
+evaluate
+matplotlib
+hydra-core
+omegaconf
+peft
+rouge_score
+tqdm
+matplotlib
+einops
+packaging
+bitsandbytes
+scipy
+ninja
